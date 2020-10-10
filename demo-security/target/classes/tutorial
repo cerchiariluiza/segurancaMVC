@@ -1,0 +1,13 @@
+incluir segurança no pom
+rodar aplicação e entrar com senha
+criar o SecuriTyConfig
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+	    //Rodar só este e ver acesso negado até para os css
+		http.authorizeRequests().anyRequest().authenticated();
+	}
+
+}
